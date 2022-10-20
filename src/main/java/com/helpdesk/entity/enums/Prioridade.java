@@ -1,4 +1,4 @@
-package com.helpdesk.model.enums;
+package com.helpdesk.entity.enums;
 
 public enum Prioridade {
 
@@ -22,14 +22,14 @@ public enum Prioridade {
         return descricao;
     }
 
-    public static Status toEnum(Integer cod) {
+    public static Prioridade toEnum(Integer cod) {
         if (cod == null) {
             return null;
         }
 
-        for (Status status : Status.values()) {
-            if (cod.equals(status.getCodigo())) {
-                return status;
+        for (Prioridade prioridade : Prioridade.values()) {
+            if (cod.equals(prioridade.getCodigo())) {
+                return prioridade;
             }
         }
 

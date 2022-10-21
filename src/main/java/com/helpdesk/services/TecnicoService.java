@@ -16,6 +16,6 @@ public class TecnicoService {
 
     public Tecnico findById(Integer id) {
         Optional<Tecnico> opt = tecnicoRepository.findById(id);
-        return opt.get();
+        return opt.orElse(null);
     }
 }
